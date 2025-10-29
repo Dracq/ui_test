@@ -4,6 +4,7 @@ import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 import 'preview_screen.dart';
 import 'widgets/image_source_dialog.dart';
+import 'auth_service.dart';
 import 'home_popup.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -87,24 +88,31 @@ class MyHomePage extends StatelessWidget {
           const SizedBox(width: 16),
           Expanded(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: const [
-                Text(
-                  'AnarRakshak',
-                  style: TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFFa5d6a7),
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: const [
+                  Text(
+                    'AnarRakshak',
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFFa5d6a7),
+                    ),
                   ),
-                ),
-                SizedBox(height: 5),
-                Text(
-                  'Your Pomegranate Farm Guard',
-                  style: TextStyle(fontSize: 16, color: Colors.white70),
-                ),
-              ],
-            ),
+                  SizedBox(height: 5),
+                  Text(
+                    'Your Pomegranate Farm Guard',
+                    style: TextStyle(fontSize: 16, color: Colors.white70),
+                  ),
+                ]),
+          ),
+          IconButton(
+            icon: const Icon(Icons.logout, color: Colors.white),
+            onPressed: () async {
+              await AuthService().signOut();
+              // The AuthWrapper will handle navigation to the LoginScreen
+            },
+            tooltip: 'Sign Out',
           ),
         ],
       ),

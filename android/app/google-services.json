@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "47025849345",
+    "project_id": "anarrakshark-prod",
+    "storage_bucket": "anarrakshark-prod.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47025849345:android:c5cee43e37bc747380ec00",
+        "android_client_info": {
+          "package_name": "com.example.ui_test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_5Ae7166ZXYPdShYPFAwtKTpuOX4ukLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
